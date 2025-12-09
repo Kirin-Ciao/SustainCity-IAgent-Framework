@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sustaincity-iagent"
+version = "1.0.0"
+description = "SustainCity Intelligent-Agent Framework for municipal solid waste (MSW) management."
+readme = "README.md"
+requires-python = ">=3.10"
+
+license = { text = "Apache-2.0" }
+
+authors = [
+  { name = "Qilin Cao", email = "caoql23@mails.jlu.edu.cn" },
+]
+
+keywords = [
+  "reinforcement-learning",
+  "RL",
+  "MSW",
+  "municipal solid waste",
+  "waste management",
+  "sustainability",
+  "intelligent agents",
+]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Scientific/Engineering :: Environmental",
+]
+
+dependencies = [
+  "numpy>=1.23",
+  "pandas>=1.5",
+  "stable-baselines3>=2.0.0",
+  "gymnasium>=0.29",
+  "matplotlib>=3.6",
+  "openpyxl>=3.1",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/Kirin-Ciao/SustainCity-IAgent-Framework"
+"Repository" = "https://github.com/Kirin-Ciao/SustainCity-IAgent-Framework"
+"Issue Tracker" = "https://github.com/Kirin-Ciao/SustainCity-IAgent-Framework/issues"
+"Zenodo" = "https://doi.org/10.5281/zenodo.17853494"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sustaincity_iagent*"]
+
+[tool.setuptools.package-data]
+"sustaincity_iagent" = [
+  "data/*.xlsx",
+  "IAgents/**/*.zip",
+]
