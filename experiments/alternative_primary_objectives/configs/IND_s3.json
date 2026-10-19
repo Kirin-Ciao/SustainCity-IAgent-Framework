@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "archetype": "IND",
+  "acp": "ACP S3",
+  "reward_mode": "resource_primary",
+  "metric_version": "mee-net-products-v2",
+  "reward_version": "objective-only-tanh-v2",
+  "scale": 1055.555556728395,
+  "scale_source": "experiments/alternative_primary_objectives/configs/frozen_scales.json",
+  "scale_revision": "v3-cost-and-resource-physical-bounds-after-pilot-saturation",
+  "run_kind": "formal",
+  "data_file": "sustaincity_iagent/data/train_data.xlsx",
+  "data_sha256": "7396c22723e5620fc333d9c1304078fa1bdb86d19067d7d8a21ff707d047fe0d",
+  "registry_sha256": "0dca3a20fec6d2928dbc0954d38f6b0b8abf0dd32bb96685797deb2d0d2f03b1",
+  "seed": 1729,
+  "total_timesteps": 200000,
+  "readiness": {
+    "status": "ready",
+    "reason": "Verified accounting and frozen scales; accepted objective pilots; PMM S1 substitution pilot accepted"
+  },
+  "normalization": "none",
+  "mass_range": [
+    0.5,
+    2.0
+  ],
+  "max_episode_steps": 20,
+  "ppo": {
+    "policy": "MlpPolicy",
+    "n_steps": 2048,
+    "batch_size": 64,
+    "n_epochs": 10,
+    "learning_rate": 0.0003,
+    "gamma": 0.99,
+    "gae_lambda": 0.95,
+    "clip_range": 0.2,
+    "ent_coef": 0.1,
+    "vf_coef": 0.5,
+    "max_grad_norm": 0.5,
+    "device": "cpu"
+  },
+  "torch_num_threads": 1,
+  "checkpoint_interval_timesteps": 4096,
+  "evaluation": {
+    "heldout_episodes": 32,
+    "seed_start": 88000,
+    "deterministic": true,
+    "horizon": 20
+  },
+  "notes": "Original action29, MEE coefficients, PPO architecture/horizon; isolated seed/observation/net-accounting adapter. No climate-first terms.",
+  "pilot_gate": {
+    "path": "experiments/alternative_primary_objectives/manifests/pilot_gates-preflight-v1.json",
+    "sha256": "4e3d0b98f1154fa223332c69f62047ad7cb111a9463e365434965ee68d8c3c3f"
+  },
+  "registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+  "progress_interval_timesteps": 256
+}

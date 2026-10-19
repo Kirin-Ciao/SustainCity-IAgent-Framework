@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "metric_version": "mee-net-products-v2",
+  "reward_version": "objective-only-tanh-v2",
+  "scale_revision": "v3-cost-and-resource-physical-bounds-after-pilot-saturation",
+  "data_sha256": "7396c22723e5620fc333d9c1304078fa1bdb86d19067d7d8a21ff707d047fe0d",
+  "registry_sha256": "0dca3a20fec6d2928dbc0954d38f6b0b8abf0dd32bb96685797deb2d0d2f03b1",
+  "archetypes": {
+    "JPN": {
+      "seed": 20261011,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 1752.0818193784955,
+          "p5": 40.218073393805845,
+          "p95": 195.6696687685879,
+          "minimum": -145.68493483489766,
+          "maximum": 253.41767962640608,
+          "random_p95_p5_scale": 155.45159537478207,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 2333.9246781732795,
+          "p5": -2219.2208320372997,
+          "p95": 114.70384613597999,
+          "minimum": -3753.546003417148,
+          "maximum": 466.44358553603155,
+          "random_p95_p5_scale": 2333.9246781732795,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.5555567283952,
+          "p5": 4.673454520523842,
+          "p95": 210.41336603201577,
+          "minimum": 0.0,
+          "maximum": 414.09002306653326,
+          "random_p95_p5_scale": 205.73991151149193,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    },
+    "EU": {
+      "seed": 20261012,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 958.8595971562758,
+          "p5": 74.92039526047665,
+          "p95": 215.35277261809892,
+          "minimum": 10.0,
+          "maximum": 253.41767962640608,
+          "random_p95_p5_scale": 140.43237735762227,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 1975.8411844731547,
+          "p5": -1807.1801385918118,
+          "p95": 168.661045881343,
+          "minimum": -3662.2845836907372,
+          "maximum": 483.4960653310991,
+          "random_p95_p5_scale": 1975.8411844731547,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.5555567283975,
+          "p5": 3.036813137337032,
+          "p95": 219.27740149671573,
+          "minimum": 0.0,
+          "maximum": 330.80302474971774,
+          "random_p95_p5_scale": 216.2405883593787,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    },
+    "US": {
+      "seed": 20261013,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 1362.0818193784955,
+          "p5": 62.56091396303768,
+          "p95": 221.19962689231133,
+          "minimum": -13.705811656482183,
+          "maximum": 253.41767962640608,
+          "random_p95_p5_scale": 158.63871292927365,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 1911.426502374925,
+          "p5": -1778.5925753675763,
+          "p95": 132.8339270073485,
+          "minimum": -3022.235124548758,
+          "maximum": 391.26073766181605,
+          "random_p95_p5_scale": 1911.426502374925,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.5555567283952,
+          "p5": 3.223853369667396,
+          "p95": 188.98808815975124,
+          "minimum": 0.0,
+          "maximum": 433.6679873481618,
+          "random_p95_p5_scale": 185.76423479008383,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    },
+    "CHN": {
+      "seed": 20261014,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 1824.987626894206,
+          "p5": -41.69097366533305,
+          "p95": 110.75156847132016,
+          "minimum": -186.90234260566825,
+          "maximum": 138.4957086330359,
+          "random_p95_p5_scale": 152.4425421366532,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 2097.453960268205,
+          "p5": -1931.3519566972536,
+          "p95": 166.10200357095138,
+          "minimum": -3516.266518357809,
+          "maximum": 455.6198044280124,
+          "random_p95_p5_scale": 2097.453960268205,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.555556728395,
+          "p5": 2.6784130198972558,
+          "p95": 207.64880183382115,
+          "minimum": 0.0,
+          "maximum": 398.2979429148151,
+          "random_p95_p5_scale": 204.9703888139239,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    },
+    "IND": {
+      "seed": 20261015,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 1168.4129795652925,
+          "p5": -63.847598766127675,
+          "p95": 63.33198835634628,
+          "minimum": -164.48398525829828,
+          "maximum": 94.29495055866272,
+          "random_p95_p5_scale": 127.17958712247395,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 2212.4779116322534,
+          "p5": -1251.6354839898192,
+          "p95": 960.842427642434,
+          "minimum": -2776.1506074770405,
+          "maximum": 1650.4459687895164,
+          "random_p95_p5_scale": 2212.4779116322534,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.555556728395,
+          "p5": 4.048762923655642,
+          "p95": 196.40236701270467,
+          "minimum": 0.0,
+          "maximum": 324.87188735870313,
+          "random_p95_p5_scale": 192.35360408904904,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    },
+    "Permissive": {
+      "seed": 20261016,
+      "sampling": {
+        "episodes": 64,
+        "steps_per_episode": 16,
+        "feasible_IPs": 1024,
+        "composition": "original uniform(.01,1)9, float32 normalized",
+        "mass_tonnes": [
+          0.5,
+          2.0
+        ],
+        "action_increment": [
+          -0.2,
+          0.2
+        ],
+        "IP_projection": "original clip and route simplexes",
+        "reference": "original reset IP, fixed per exogenous episode",
+        "scale_formula": "max(P95-P5 of metric over all samples, 1 physical unit/t)"
+      },
+      "metrics": {
+        "net_cost": {
+          "status": "ready",
+          "scale": 1174.31,
+          "p5": -42.125808758059115,
+          "p95": 70.40309048351699,
+          "minimum": -110.03318508517744,
+          "maximum": 100.18,
+          "random_p95_p5_scale": 112.52889924157611,
+          "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0,
+          "newly_filled_missing_scale": true,
+          "economic_registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+          "route_net_cost_minimum": -988.56,
+          "route_net_cost_maximum": 185.75
+        },
+        "net_energy": {
+          "status": "ready",
+          "scale": 2031.798995400644,
+          "p5": -1201.5551488353387,
+          "p95": 830.2438465653053,
+          "minimum": -2544.112885202872,
+          "maximum": 1229.9288580627904,
+          "random_p95_p5_scale": 2031.798995400644,
+          "scale_method": "max(P95-P5,1 physical unit/t)",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        },
+        "resource_output": {
+          "status": "ready",
+          "scale": 1055.555556728395,
+          "p5": 3.127191845646494,
+          "p95": 222.40776275869734,
+          "minimum": 0.0,
+          "maximum": 338.7458901932881,
+          "random_p95_p5_scale": 219.28057091305084,
+          "scale_method": "maximum verified resource kg/t route yield; absolute delta bounded by scale",
+          "samples": 1024,
+          "calibration_saturation_abs_reward_gt_095": 0.0
+        }
+      }
+    }
+  },
+  "registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12"
+}

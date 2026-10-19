@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "metric_version": "mee-net-products-v2",
+  "reward_version": "objective-only-tanh-v2",
+  "scale_revision": "v3-cost-and-resource-physical-bounds-after-pilot-saturation",
+  "registry_sha256": "0dca3a20fec6d2928dbc0954d38f6b0b8abf0dd32bb96685797deb2d0d2f03b1",
+  "objectives": {
+    "ACP S1": {
+      "status": "passed",
+      "run_id": "20261011T152748Z_CHN_ACP_S1_seed1729_8d12cd5e",
+      "actual_timesteps": 8192,
+      "seed": 1729,
+      "heldout_episodes": 32,
+      "scale": 1824.987626894206,
+      "fixed_target_improvement": 369.47995637815177,
+      "heldout_target_improvement": 394.1105463977843,
+      "acceptance_sha256": "d2b89495d66a6acb664aa73f6029ba9a9a2b7514e41a50bb40672da2bcd55613",
+      "final_model_sha256": "0e28fe8d70ac58cb99c7fdde4cd3efbaebb7c676ced738cc71ec5c7101be144b",
+      "evaluation_sha256": "97ecd7db22332213c976b70f2eebd5b43d389a5530b7cd8e01e2f8c2cfe4cb0d"
+    },
+    "ACP S2": {
+      "status": "passed",
+      "run_id": "20261011T152825Z_CHN_ACP_S2_seed1729_555a587a",
+      "actual_timesteps": 8192,
+      "seed": 1729,
+      "heldout_episodes": 32,
+      "scale": 2097.453960268205,
+      "fixed_target_improvement": 3384.184735724625,
+      "heldout_target_improvement": 3459.638558852305,
+      "acceptance_sha256": "6e03867d18240b03fa919cc70957a8aaa5be40c4b3d55360a1a9735cffe96d93",
+      "final_model_sha256": "af16ead2c22172b7e9c7bb2ffb36f662f86b039be194144f4b00622772daebeb",
+      "evaluation_sha256": "7ec9e420c3fca567c3540ad6e04884ad0d703608a4a6a5cb86797cefe15a5920"
+    },
+    "ACP S3": {
+      "status": "passed",
+      "run_id": "20261011T152825Z_CHN_ACP_S3_seed1729_685e2052",
+      "actual_timesteps": 8192,
+      "seed": 1729,
+      "heldout_episodes": 32,
+      "scale": 1055.555556728395,
+      "fixed_target_improvement": 485.7172378241248,
+      "heldout_target_improvement": 588.663575993768,
+      "acceptance_sha256": "dabffd0eca2987febabaa16d7e92005961f70cdf652ec14e37dcd573c277c90e",
+      "final_model_sha256": "7b716940ac0c4a52a5bdfbefbd5a3d19ae1e727150a6ebd1146da2066f4ad26e",
+      "evaluation_sha256": "c77690ccc98ab07376154f516635b66519f1eb03727b88c4fbff7d7946fb2e63"
+    }
+  },
+  "data_sha256": "7396c22723e5620fc333d9c1304078fa1bdb86d19067d7d8a21ff707d047fe0d",
+  "carry_forward_verification": {
+    "baseline_experiment_commit": "5a44b2eaaed77505bfd990c3766a54be37f61f93",
+    "previous_pilot_gate_sha256": "fa56dba68f5a9c4f35b6c38dc3505204a31bb68144e48f35ea3f3d5b17170952",
+    "previous_registry_contract_sha256": "b7c8c73e5c48fd65cb2883ce743a48972d268b06b140e03b410c703c804f5d42",
+    "unchanged_managed_archetype_contracts": [
+      "JPN",
+      "EU",
+      "US",
+      "CHN",
+      "IND"
+    ],
+    "unchanged_scale_records": [
+      "JPN|net_cost",
+      "JPN|net_energy",
+      "JPN|resource_output",
+      "EU|net_cost",
+      "EU|net_energy",
+      "EU|resource_output",
+      "US|net_cost",
+      "US|net_energy",
+      "US|resource_output",
+      "CHN|net_cost",
+      "CHN|net_energy",
+      "CHN|resource_output",
+      "IND|net_cost",
+      "IND|net_energy",
+      "IND|resource_output",
+      "Permissive|net_energy",
+      "Permissive|resource_output"
+    ],
+    "count_unchanged_scales": 17,
+    "PMM_nonmonetary_recipes_routes_and_IP_constraints_retained": true,
+    "training_logic_changes": "Persistent diagnostics, process ownership, monitoring, acceptance text and new PMM gate; PPO/reward/action/normalization unchanged",
+    "ent_coef_authorization": "2026-10-12 user final table: 0.1 for all archetypes; replaces previous PMM-only 0.02",
+    "historical_CHN_pilot_artifact_hashes_reverified": true
+  },
+  "archetype_objectives": {
+    "Permissive|ACP S1": {
+      "status": "passed",
+      "run_id": "20261012T024656Z_Permissive_ACP_S1_seed1729_eec56f64",
+      "actual_timesteps": 8192,
+      "seed": 1729,
+      "heldout_episodes": 32,
+      "scale": 1174.31,
+      "target_mean_improvement": 354.41680232248046,
+      "initial_net_cost": 48.777161232720495,
+      "final_net_cost": -305.63964108975995,
+      "saturation_fraction": 0.0,
+      "acceptance_sha256": "498123575fe7d6995f7c67a9d145dc33c4d3f92f8ab68d40353ef91697bedf4d",
+      "final_model_sha256": "c28cb21a3887e8e4eb8ec765712ccdbfa1fd5c6f409f7a12f698d44166a7613f",
+      "validation_sha256": "a95ba02abe74e2a33f62f181254a5b86175de49543bd33910cafa9c3bdefd10e",
+      "economic_substitution_source": "experiments/alternative_primary_objectives/manifests/pmm_economic_substitution.json"
+    }
+  },
+  "formal_batch_was_not_started": true
+}

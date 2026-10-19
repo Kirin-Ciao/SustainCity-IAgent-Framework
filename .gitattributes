@@ -1,2 +1,9 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve frozen ACP S1-S3 file checksums on every platform.
+/.gitattributes text eol=lf
+/README.md text eol=lf
+/sustaincity_iagent/alternative_*.py -text
+/sustaincity_iagent/data/alternative_product_registry.json -text
+/experiments/alternative_primary_objectives/** -text

@@ -1,0 +1,10 @@
+# Keep generated training artifacts local; published final models are tracked.
+runs/
+pilot_runs/
+checkpoints/
+logs/
+figures/
+predictions/
+tables/
+__pycache__/
+*.py[cod]

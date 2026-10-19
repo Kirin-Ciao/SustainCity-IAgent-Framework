@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "configs": [
+    "JPN_s1.json",
+    "JPN_s2.json",
+    "JPN_s3.json",
+    "EU_s1.json",
+    "EU_s2.json",
+    "EU_s3.json",
+    "US_s1.json",
+    "US_s2.json",
+    "US_s3.json",
+    "CHN_s1.json",
+    "CHN_s2.json",
+    "CHN_s3.json",
+    "IND_s1.json",
+    "IND_s2.json",
+    "IND_s3.json",
+    "Permissive_s1.json",
+    "Permissive_s2.json",
+    "Permissive_s3.json"
+  ],
+  "combinations": 18,
+  "ready": 18,
+  "blocked": [],
+  "formal_batch_was_not_started": true,
+  "pilot_gate": {
+    "path": "experiments/alternative_primary_objectives/manifests/pilot_gates-preflight-v1.json",
+    "sha256": "4e3d0b98f1154fa223332c69f62047ad7cb111a9463e365434965ee68d8c3c3f"
+  },
+  "frozen_scales_sha256": "862fb4fb7e760e4dccf02436cfa82b9aeaedfb1a6b9200ede211c4de33f4a12f"
+}
