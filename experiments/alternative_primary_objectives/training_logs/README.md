@@ -1,6 +1,6 @@
 # Retained formal training records — ACP S1–S3
 
-This directory contains retained historical records for the 18 released formal PPO agents. The logs were not regenerated from figures or from new model executions. The disclosure audit on 2026-10-22 only read files, compared hashes, inspected ZIP JSON metadata and checked existing recorded numbers. No training, resume or policy inference was executed for this disclosure.
+This directory contains retained historical records for the 18 released formal PPO agents.
 
 ## Run and model index
 
@@ -27,7 +27,7 @@ All tasks used seed 1729, 200000 nominal steps, 200704 actual environment transi
 | Permissive | ACP S2 | `20261013T033709Z_Permissive_ACP_S2_seed1729_badf2fdf` | [Permissive/ACP_S2](Permissive/ACP_S2/) | [model](../models/Permissive/ACP_S2.zip) | 200704 |
 | Permissive | ACP S3 | `20261013T034002Z_Permissive_ACP_S3_seed1729_01b3fcbe` | [Permissive/ACP_S3](Permissive/ACP_S3/) | [model](../models/Permissive/ACP_S3.zip) | 200704 |
 
-The [index](index.json) records model SHA256, published configuration path, frozen reward/metric versions and scales, runtime dependencies, row counts and audit results. The unchanged [released-model manifest](../models/manifest.json) is the primary source-to-model index.
+The [index](index.json) records model SHA256, published configuration path, frozen reward/metric versions and scales, runtime dependencies, row counts and file references. The unchanged [released-model manifest](../models/manifest.json) is the primary source-to-model index.
 
 ## Files and interpretation
 
@@ -39,10 +39,10 @@ The [index](index.json) records model SHA256, published configuration path, froz
 | `progress_history.jsonl` | Append-only monitoring events: started, progress, ppo_update, checkpoint_saved, heldout_evaluation, completed. Same-timestep events are intentional. Null diagnostics before the first update are preserved. `resumed` is false throughout these 18 selected histories. |
 | `progress.json` | Last monitoring snapshot; not the whole history. |
 | `config.json` | Original effective formal training configuration, with only machine-specific path strings made portable. |
-| `manifest.json` | Historical code/data/registry hashes, effective configuration and dependency versions. Historical Git commit metadata is unavailable (Git was not on PATH); no commit has been invented. |
+| `manifest.json` | Historical code/data/registry hashes, effective configuration and dependency versions. Historical Git commit metadata is unavailable (Git was not on PATH). |
 | `completed.json`, `status.json` | Original completion state and historical file hashes. |
 | `latest_checkpoint.json` | Original final checkpoint reference and manifest hash. This is provenance, not a distributed checkpoint bundle. |
-| `validation.json` | Retained training-time finite-value/boundary/mass checks. A historical result, not a new validation or proof of optimality. |
+| `validation.json` | Retained training-time finite-value/boundary/mass checks. Recorded per-step checks and metric ranges. |
 
 ## CSV field dictionary
 
@@ -81,18 +81,18 @@ All original names, rows and numeric representations are retained byte-for-byte 
 | `resource_output`, `resource_output_mean` | Physical resource-product output, kg/tMSW; energy products are excluded. |
 | `primary_mass_relative_residual`, `primary_mass_relative_residual_mean` | Absolute primary-route mass residual divided by input mass; dimensionless. |
 
-The JSON/JSONL monitoring fields retain their original names: `target` is the nominal transition budget, `aligned_target` the full-rollout budget, `percent_complete` the aligned progress, `eta_seconds` the recorded ETA, `pid` the original process ID, `updated_at_epoch` the original Unix timestamp, `event`/`status` the recorded state, `latest_checkpoint`/`checkpoint_event` the checkpoint reference/state, and `resumed` whether the original run resumed. Identity and diagnostic fields have the same meanings as above. `scientific_acceptance` is a historical recorded decision, not a new conclusion of this disclosure.
+The JSON/JSONL monitoring fields retain their original names: `target` is the nominal transition budget, `aligned_target` the full-rollout budget, `percent_complete` the aligned progress, `eta_seconds` the recorded ETA, `pid` the original process ID, `updated_at_epoch` the original Unix timestamp, `event`/`status` the recorded state, `latest_checkpoint`/`checkpoint_event` the checkpoint reference/state, and `resumed` whether the original run resumed. Identity and diagnostic fields have the same meanings as above. `scientific_acceptance` records the original training-time decision.
 
 ## Privacy and checksums
 
 CSV files are **byte-identical** to retained originals. JSON/JSONL copies replace only local absolute path strings: repository paths become repository-relative; external workbook source references use `source_materials/`. All fields, numeric values, missing values, timestamps, events and original historical hash fields are retained.
 
-The [publication manifest](publication_manifest.json) lists each source-relative path, original SHA256, public SHA256, size and precise changed field locations. Historical `completed.json.files` hashes refer to **original artifacts**. For a path-sanitized JSON, verify the public file with `public_sha256`; do not compare it directly with its original historical hash. The original files remain unchanged locally. The manifest/index are explicitly new disclosure documents, not reconstructed historical logs.
+The [publication manifest](publication_manifest.json) lists each source-relative path, original SHA256, public SHA256, size and precise changed field locations. Historical `completed.json.files` hashes refer to **original artifacts**. For a path-sanitized JSON, verify the public file with `public_sha256`; do not compare it directly with its original historical hash. The manifest and index describe the available records; they are not training logs.
 
 ## Evidence and limits
 
-Configuration, runtime/source/data hashes, original completion hashes and final ZIP/model checksums support internal consistency and provenance review. CSV/monitor histories support update-level numerical-stability analysis. The recent-100-episode reward means independently reconcile with recorded episode rewards to floating-point precision.
+Configuration, runtime/source/data hashes, original completion hashes and final ZIP/model checksums support internal consistency and provenance review. CSV/monitor histories support update-level numerical-stability analysis.
 
 These retained records do not independently certify the original execution environment, prove a global optimum, establish cross-seed robustness or validate physical assumptions. Reusing the same hyperparameters does not imply identical scientific outcomes across objectives, archetypes, software/hardware or new runs.
 
-Pilot/smoke/recovery-test runs are excluded from this formal collection. Large per-step trajectories (about 8.0 GB in total), checkpoint bundles, duplicate model archives, launcher/installation output and separate held-out evaluation files remain local. Their absence from this disclosure is not treated as missing rollout diagnostics. TensorBoard event files were not retained for these selected runs; they have not been fabricated. The final model archives remain unchanged in `models/`.
+Pilot/smoke/recovery-test runs are excluded from this formal collection. Large per-step trajectories (about 8.0 GB in total), checkpoint bundles, duplicate model archives, launcher/installation output and separate held-out evaluation files remain local. These files are not required to read the retained rollout diagnostics. TensorBoard event files were not retained for these selected runs. The final model archives remain unchanged in `models/`.
