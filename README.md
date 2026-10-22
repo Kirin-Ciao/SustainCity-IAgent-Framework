@@ -66,7 +66,11 @@ metrics = info["metrics"]
 env.close()
 ```
 
-The adapter uses 39-dimensional observations and the original 29-dimensional continuous action space. Fixed-composition inputs can be supplied through the adapter's documented `reset(options={"composition": ..., "total_mass": ...})` interface. Policy mass must remain within the calibrated 0.5–2 tonne range; global scenario extrapolation is outside this release.
+The adapter uses 39-dimensional observations and the original 29-dimensional continuous action space. Fixed-composition inputs can be supplied through the adapter's documented `reset(options={"composition": ..., "total_mass": ...})` interface. Policy mass must remain within the calibrated 0.5–2 tonne range.
+
+## Historical training records
+
+The [training-log index](experiments/alternative_primary_objectives/training_logs/README.md) links each released agent to its original formal run, raw diagnostic CSVs, monitoring history and configuration metadata. The index documents path-only privacy edits and original/published SHA256 checksums.
 
 ## Train, monitor and resume
 
@@ -86,7 +90,7 @@ $exp = '.\experiments\alternative_primary_objectives'
 & "$exp\check_training.ps1" -Watch
 ```
 
-The Python CLI is `python -m sustaincity_iagent.alternative_training batch --config-dir experiments/alternative_primary_objectives/configs --output-root experiments/alternative_primary_objectives/runs`. Add `--dry-run` for the preflight check or `--resume` to restore an eligible latest checkpoint. Published final archives are under `models/`; new training writes under `runs/` and does not replace these archives. Historical training checkpoints and log files are not distributed, so the published final archive alone is not the exact interrupted-run resume bundle.
+The Python CLI is `python -m sustaincity_iagent.alternative_training batch --config-dir experiments/alternative_primary_objectives/configs --output-root experiments/alternative_primary_objectives/runs`. Add `--dry-run` for the preflight check or `--resume` to restore an eligible latest checkpoint. Published final archives are under `models/`; new training writes under `runs/` and does not replace these archives. Historical training logs are available in [training_logs](experiments/alternative_primary_objectives/training_logs/README.md). Checkpoint bundles are not included; a final model archive alone is not an interrupted-run resume bundle.
 
 | PPO parameter | Value |
 |---|---|

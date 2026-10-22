@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+  "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures.",
+  "previous_registry_sha256": "b7c8c73e5c48fd65cb2883ce743a48972d268b06b140e03b410c703c804f5d42",
+  "registry_sha256": "0dca3a20fec6d2928dbc0954d38f6b0b8abf0dd32bb96685797deb2d0d2f03b1",
+  "original_PMM_ENV_sha256": "e0df89ef2c8857a5d14f4476d33d367b30f86e04d44cd875c90fad5cdb2996fd",
+  "economic_substitution": {
+    "revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+    "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures.",
+    "product_prices": [
+      {
+        "product": "biogas_m3",
+        "price_usd2020_per_unit": 0.462,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E4",
+        "price_unit": "USD2020/m3",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "electricity_mj",
+        "price_usd2020_per_unit": 0.026,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E5",
+        "price_unit": "USD2020/MJ",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "heat_mj",
+        "price_usd2020_per_unit": 0.011,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E6",
+        "price_unit": "USD2020/MJ",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "pig_iron",
+        "price_usd2020_per_unit": 1.174,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E8",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "brass",
+        "price_usd2020_per_unit": 4.65,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E9",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "aluminium",
+        "price_usd2020_per_unit": 1.458,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E10",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "plastic",
+        "price_usd2020_per_unit": 0.746,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E11",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "digester_sludge",
+        "price_usd2020_per_unit": 0.544,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E12",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "compost",
+        "price_usd2020_per_unit": 0.57,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E13",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "organic_fertiliser",
+        "price_usd2020_per_unit": 0.57,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E13",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "wood_chips",
+        "price_usd2020_per_unit": 0.544,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E12",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "rubber",
+        "price_usd2020_per_unit": 0.429,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E14",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "paper",
+        "price_usd2020_per_unit": 0.591,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E15",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      },
+      {
+        "product": "glass",
+        "price_usd2020_per_unit": 0.629,
+        "handling": "missing_Permissive_substituted_from_IND",
+        "original_value": null,
+        "source_archetype": "IND",
+        "source_file": {
+          "path": "source_materials/DATA/data_2.0/2.0_result_IND.xlsx",
+          "sha256": "c719fa0c3ec2ff84f39084dfed11e179dc857cd7c585845a7fae1d54103f14e2",
+          "sheet": "parameters",
+          "price_header": "PRICE\nUSD 2020"
+        },
+        "source_cell": "E16",
+        "price_unit": "USD2020/kg",
+        "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+      }
+    ],
+    "preserved_fields": [
+      "routes",
+      "recipe_source_sheet",
+      "recipe_source_note",
+      "S2",
+      "S3"
+    ],
+    "original_price_source": {
+      "path": "source_materials/DATA/data_2.0/2.0_result_PMM.xlsx",
+      "sha256": "1cbcd5f2c4f0ac41707ff6ce0d26f36246ae1d7e7db5791b71307ca4ace5d924",
+      "sheet": "parameters",
+      "price_header": null
+    }
+  },
+  "retained_treatment_cost_count": 31,
+  "borrowed_price_count": 14,
+  "existing_17_frozen_metric_records_unchanged": true,
+  "existing_17_frozen_metric_records_sha256_before": "f724bad5c7d47b0fd37778e297cc006f8696b829fc742e4ff8e620e61c3aa273",
+  "existing_17_frozen_metric_records_sha256_after": "f724bad5c7d47b0fd37778e297cc006f8696b829fc742e4ff8e620e61c3aa273",
+  "retained_fees": {
+    "collection": {
+      "handling": "retained_existing_valid_Permissive",
+      "value": 41.25,
+      "source_archetype": "Permissive",
+      "source_file": {
+        "path": "sustaincity_iagent/env/ENV_Permissive.py",
+        "sha256": "e0df89ef2c8857a5d14f4476d33d367b30f86e04d44cd875c90fad5cdb2996fd"
+      },
+      "source_field": "transport_params.collect_cost",
+      "unit": "USD2020/t controlled MSW",
+      "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+    },
+    "transport": {
+      "handling": "retained_existing_valid_Permissive",
+      "value": 41.25,
+      "source_archetype": "Permissive",
+      "source_file": {
+        "path": "sustaincity_iagent/env/ENV_Permissive.py",
+        "sha256": "e0df89ef2c8857a5d14f4476d33d367b30f86e04d44cd875c90fad5cdb2996fd"
+      },
+      "source_field": "transport_params.cost",
+      "unit": "USD2020/t controlled MSW",
+      "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+    },
+    "classification": {
+      "handling": "retained_existing_valid_Permissive",
+      "value": 41.25,
+      "source_archetype": "Permissive",
+      "source_file": {
+        "path": "sustaincity_iagent/env/ENV_Permissive.py",
+        "sha256": "e0df89ef2c8857a5d14f4476d33d367b30f86e04d44cd875c90fad5cdb2996fd"
+      },
+      "source_field": "transport_params.classify_cost",
+      "unit": "USD2020/t classified MSW",
+      "authorization": "Researcher 2026-10-12: retain existing valid Permissive economic and engineering parameters; substitute only missing economic parameters with corresponding IND parameters, preserving units and all Permissive MEE/IP/input structures."
+    }
+  },
+  "new_PMM_S1_frozen_scale": {
+    "status": "ready",
+    "scale": 1174.31,
+    "p5": -42.125808758059115,
+    "p95": 70.40309048351699,
+    "minimum": -110.03318508517744,
+    "maximum": 100.18,
+    "random_p95_p5_scale": 112.52889924157611,
+    "scale_method": "verified net route cost range; convex route accounting bounds absolute delta by scale",
+    "samples": 1024,
+    "calibration_saturation_abs_reward_gt_095": 0.0,
+    "newly_filled_missing_scale": true,
+    "economic_registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+    "route_net_cost_minimum": -988.56,
+    "route_net_cost_maximum": 185.75
+  },
+  "historical_files_changed": false
+}

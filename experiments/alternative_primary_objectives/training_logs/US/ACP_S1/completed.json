@@ -1,0 +1,20 @@
+{
+  "actual_timesteps": 200704,
+  "checkpoint": "experiments/alternative_primary_objectives/runs/20261013T030727Z_US_ACP_S1_seed1729_fd731efb/checkpoints/step_000200704",
+  "elapsed_this_segment_seconds": 181.56300000002375,
+  "files": {
+    "acceptance.json": "9e781676ff6dc16c2455fcd3700d71066d82dac9ca96d6e2178bf5170183170e",
+    "config.json": "29fda02f4541b1ca9c98bc1fe3c99e043e93891b7482d4280e318f4bc7a22b7f",
+    "episodes.csv": "9ed87557fd35c196b0357e0fd5e028ebaf8c25007890c4c0ce79c96fadc8eb12",
+    "final_model.zip": "ae01f4b76483e63f205011a9de5e616c24f004a6382d9f40d6de1629d5548efb",
+    "initial_model.zip": "9fb27b980101d9473c466cfd58a5534666a61df55dfbe8584b5168cb13c76451",
+    "manifest.json": "8ef81a985bf648ef968bb3eeb9bf1e17a31a5b76bffce6977c7160be8be67596",
+    "model.zip": "ae01f4b76483e63f205011a9de5e616c24f004a6382d9f40d6de1629d5548efb",
+    "rollouts.csv": "0ce2671eb5b8f6d3875bb3a1f7ae9361d2f8b4da808e09d45a5a5450e9486870",
+    "trajectory.csv": "3fa5954a9772b7a2b5adca59c2c975485b70284e3d49ba324c0c518bfcbbaf29",
+    "validation.json": "8dd20095923301232db75c5b21b31b17f254d96ca4223090efe980c8cbd2eb25"
+  },
+  "scientific_acceptance": "passed",
+  "status": "completed",
+  "target_timesteps": 200000
+}

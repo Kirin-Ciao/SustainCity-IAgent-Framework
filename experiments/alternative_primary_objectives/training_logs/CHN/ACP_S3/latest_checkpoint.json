@@ -1,0 +1,5 @@
+{
+  "manifest_sha256": "9e2a4b0c90acfcdf1aff599a09fcc1f09b8939b3a49bd15379885260d98b0fd5",
+  "path": "experiments/alternative_primary_objectives/runs/20261013T032232Z_CHN_ACP_S3_seed1729_db6ac718/checkpoints/step_000200704",
+  "timesteps": 200704
+}

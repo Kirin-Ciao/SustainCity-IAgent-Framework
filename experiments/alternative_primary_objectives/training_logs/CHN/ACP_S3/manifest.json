@@ -1,0 +1,86 @@
+{
+  "code_sha256": {
+    "alternative_env.py": "7b486394783caf038c235471464894ae2f5688a6afcf54d9fd79ea2712b48f0f",
+    "alternative_evaluation.py": "1bcb5bd69e31ee0ebc6d571aba3c248a5cfbb695005f8b6ade54511cdc414300",
+    "alternative_factory.py": "be4da33515036289c34ef2171b3f8edf659d17eef320895f457d156892e9ea6c",
+    "alternative_launch.py": "1e93e7ea158ee310489862f62179af162674dbe8134f1add1d045460cd13b063",
+    "alternative_metrics.py": "a559752905c8c59b7278884b597584649bdea9d7c8897d95db08d13171e7b693",
+    "alternative_rewards.py": "aa9b80ae687f4f21cfd81ed76a0c301e6f6fbb505d099d8cacb9157e21f90ed5",
+    "alternative_training.py": "a7f2ec6b6c3fddbaab61007bfa8e234a5489c4bcb517c71e6e11ca9a5d2cd83f",
+    "env/ENV_CHN.py": "d7c4cce350effcf97a83acad34a4c7737eb4c1d02d5979d8616d90d9498892a0"
+  },
+  "compatibility_sha256": "e55f574fc66b0112e46087600eddf6ac3f8710c09b4dabc279ef85e7770c48cb",
+  "config": {
+    "acp": "ACP S3",
+    "archetype": "CHN",
+    "checkpoint_interval_timesteps": 4096,
+    "checkpoint_rollouts": 2,
+    "data_file": "sustaincity_iagent/data/train_data.xlsx",
+    "data_sha256": "7396c22723e5620fc333d9c1304078fa1bdb86d19067d7d8a21ff707d047fe0d",
+    "evaluation": {
+      "deterministic": true,
+      "heldout_episodes": 32,
+      "horizon": 20,
+      "seed_start": 88000
+    },
+    "mass_range": [
+      0.5,
+      2.0
+    ],
+    "max_episode_steps": 20,
+    "metric_version": "mee-net-products-v2",
+    "normalization": "none",
+    "notes": "Original action29, MEE coefficients, PPO architecture/horizon; isolated seed/observation/net-accounting adapter. No climate-first terms.",
+    "pilot_gate": {
+      "path": "experiments/alternative_primary_objectives/manifests/pilot_gates-preflight-v1.json",
+      "sha256": "4e3d0b98f1154fa223332c69f62047ad7cb111a9463e365434965ee68d8c3c3f"
+    },
+    "ppo": {
+      "batch_size": 64,
+      "clip_range": 0.2,
+      "device": "cpu",
+      "ent_coef": 0.1,
+      "gae_lambda": 0.95,
+      "gamma": 0.99,
+      "learning_rate": 0.0003,
+      "max_grad_norm": 0.5,
+      "n_epochs": 10,
+      "n_steps": 2048,
+      "policy": "MlpPolicy",
+      "vf_coef": 0.5
+    },
+    "progress_interval_timesteps": 256,
+    "readiness": {
+      "reason": "Verified accounting and frozen scales; accepted objective pilots; PMM S1 substitution pilot accepted",
+      "status": "ready"
+    },
+    "registry_revision": "pmm-missing-economics-ind-authorized-2026-10-12",
+    "registry_sha256": "0dca3a20fec6d2928dbc0954d38f6b0b8abf0dd32bb96685797deb2d0d2f03b1",
+    "reward_mode": "resource_primary",
+    "reward_version": "objective-only-tanh-v2",
+    "run_kind": "formal",
+    "scale": 1055.555556728395,
+    "scale_revision": "v3-cost-and-resource-physical-bounds-after-pilot-saturation",
+    "scale_source": "experiments/alternative_primary_objectives/configs/frozen_scales.json",
+    "schema_version": 1,
+    "seed": 1729,
+    "torch_num_threads": 1,
+    "total_timesteps": 200000
+  },
+  "git_commit": null,
+  "git_executable": null,
+  "git_metadata_error": "git executable is not on PATH; source/data SHA256 provenance remains available",
+  "git_metadata_status": "unavailable",
+  "runtime": {
+    "device": "cpu",
+    "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "versions": {
+      "gymnasium": "1.1.1",
+      "numpy": "2.0.2",
+      "openpyxl": "3.1.5",
+      "pandas": "3.0.6",
+      "stable-baselines3": "2.7.0",
+      "torch": "2.8.0"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "checks": [
+    "finite_metrics_and_reward",
+    "29_IP_bounds",
+    "primary_mass_conservation",
+    "model_load_and_timesteps"
+  ],
+  "limitations": [
+    "Single-seed short runs do not establish convergence or stochastic robustness",
+    "Primary waste routing conservation does not imply all downstream product mass is conserved"
+  ],
+  "metric_ranges": {
+    "economic_benefits": [
+      0.0,
+      524.3706624534046
+    ],
+    "energy_input": [
+      0.0,
+      1863.0685163171274
+    ],
+    "energy_output": [
+      0.0,
+      5988.54266009639
+    ],
+    "ghg": [
+      -1214.2599174351762,
+      775.4427706827041
+    ],
+    "gross_cost": [
+      5.893434409916421,
+      142.74902631680183
+    ],
+    "net_cost": [
+      -388.270090816957,
+      138.4957086330359
+    ],
+    "net_energy": [
+      -5666.138756095334,
+      1349.5762203951222
+    ],
+    "primary_mass_relative_residual": [
+      0.0,
+      1.352809865640775e-07
+    ],
+    "resource_output": [
+      0.0,
+      598.599501332128
+    ]
+  },
+  "saturation_fraction": 1.4947385204081632e-05,
+  "status": "passed",
+  "steps": 200704
+}
